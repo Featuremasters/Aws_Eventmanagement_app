@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(120deg, #0dd6dd, #5ea7bd);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Container */
+  .container {
+    background: rgb(172, 230, 14);
+    padding: 20px 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    animation: slideIn 1s ease-out;
+  }
+  
+  /* Title */
+  .title {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Form elements */
+  .form label {
+    font-weight: bold;
+    color: #444;
+    display: block;
+    margin: 10px 0 5px;
+  }
+  
+  .form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #141414;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: 0.3s ease;
+  }
+  
+  .form input:focus {
+    border-color: #ff6b6b;
+    box-shadow: 0 0 5px rgba(255, 107, 107, 0.5);
+    outline: none;
+  }
+  
+  /* Button */
+  .btn {
+    background: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+  
+  .btn:hover {
+    background: #ee5253;
+    transform: translateY(-3px);
+  }
+  
+  /* Output */
+  .output {
+    margin-top: 20px;
+    color: #333;
+  }
+  
+  /* Animations */
+  @keyframes slideIn {
+    from {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }

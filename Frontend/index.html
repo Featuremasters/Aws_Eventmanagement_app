@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Management</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">Event Registration Form</h1>
+      <form id="event-form" class="form">
+        <label for="event_id">Event ID:</label>
+        <input type="number" id="event_id" name="event_id" required />
+
+        <label for="event_name">Event Name:</label>
+        <input type="text" id="event_name" name="event_name" required />
+
+        <label for="event_date">Event Date:</label>
+        <input type="date" id="event_date" name="event_date" required />
+
+        <button type="submit" class="btn">Register</button>
+      </form>
+      <div class="output">
+        <p><strong>Response:</strong></p>
+        <p id="response-message"></p>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
