@@ -38,3 +38,40 @@ resource "aws_dynamodb_table" "Event-table" {
     Project = "EventManagement"
   }
 }
+
+# HTTP API Gateway
+resource "aws_apigatewayv2_api" "http_api" {
+  name          = "event-api"
+  protocol_type = "HTTP"
+
+  cors_configuration {
+    allow_headers  = ["*"]
+    allow_methods  = ["*"]
+    allow_origins  = ["*"]
+    expose_headers = ["*"]
+    max_age        = 3600
+  }
+}
+
+# Lambda Function Integration
+resource "aws_apigatewayv2_integration" "lambda_integration" {
+  api_id                 = aws_apigatewayv2_api.http_api.id
+  integration_type       = "AWS_PROXY"
+  integration_uri        = aws_lambda_function.Lambda.invoke_arn
+  integration_method     = "POST"
+  payload_format_version = "2.0"
+}
+
+# API Route for POST /api/events
+resource "aws_apigatewayv2_route" "post_event" {
+  api_id    = aws_apigatewayv2_api.http_api.id
+  route_key = "POST /api/events"
+  target    = "integrations/${aws_apigatewayv2_integration.lambda_integration.id}"
+}
+
+# Deploy API
+resource "aws_apigatewayv2_stage" "stage" {
+  api_id      = aws_apigatewayv2_api.http_api.id
+  name        = "production"
+  auto_deploy = true
+}

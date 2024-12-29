@@ -37,3 +37,12 @@ resource "aws_iam_role_policy_attachment" "lambda_dynamodb_policy_attachment" {
   role       = aws_iam_role.lambda_role.name
   policy_arn = aws_iam_policy.lambda_dynamodb_policy.arn
 }
+
+# Lambda Permission for API Gateway to invoke the Lambda function
+resource "aws_lambda_permission" "allow_apigw_invoke" {
+  statement_id  = "AllowApiGatewayInvoke"
+  action        = "lambda:InvokeFunction"
+  function_name = aws_lambda_function.Lambda.function_name
+  principal     = "apigateway.amazonaws.com"
+  source_arn    = "${aws_apigatewayv2_api.http_api.execution_arn}/*/*"
+}
