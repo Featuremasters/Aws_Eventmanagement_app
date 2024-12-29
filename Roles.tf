@@ -16,7 +16,7 @@ resource "aws_iam_role" "lambda_role" {
 }
 # Define the IAM policy that allows inserting into DynamoDB
 resource "aws_iam_policy" "lambda_dynamodb_policy" {
-  name        = "lambda_dynamodb_policy"
+  name        = "lambda_dynamodb_table_policy"
   description = "Policy for Lambda to insert events into DynamoDB"
   policy = jsonencode({
     Version = "2012-10-17"
@@ -26,10 +26,11 @@ resource "aws_iam_policy" "lambda_dynamodb_policy" {
         Action = [
           "dynamodb:PutItem"
         ]
-        Resource = "arn:aws:dynamodb:${var.region}:${var.account_id}:table/${var.table_name}"
+        Resource = aws_dynamodb_table.Event-table.arn
       }
     ]
   })
+
 }
 # Attach the IAM policy to the IAM role
 resource "aws_iam_role_policy_attachment" "lambda_dynamodb_policy_attachment" {

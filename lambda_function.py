@@ -2,7 +2,7 @@ import boto3
 import json
 #initalize DynamoDB resource outside the function as a best practice
 dynamodb=boto3.resource("dynamodb")
-event_table=dynamodb.Table('Event_Management')
+event_table=dynamodb.Table('event-management')
 
 def lambda_handler(event, context):
     try:
@@ -14,8 +14,8 @@ def lambda_handler(event, context):
         
          # Extract and sanitize values
         receivedEventID = int(event_data["eid"])
+        receivedEventDate = int(event_data["edate"].strip())
         receivedEventName = event_data["ename"].strip()
-        receivedEventDate = event_data["edate"].strip()
 
         # Add the item to the DynamoDB table
         event_table.put_item(

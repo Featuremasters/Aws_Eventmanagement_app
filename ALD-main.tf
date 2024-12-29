@@ -19,3 +19,22 @@ resource "aws_lambda_layer_version" "lambda_layer" {
   compatible_runtimes = ["python3.13"]
   description         = "A layer for shared dependencies (boto3, requests)"
 }
+
+resource "aws_dynamodb_table" "Event-table" {
+  name         = "event-management"
+  billing_mode = "PAY_PER_REQUEST"
+  hash_key     = "event_id" # Partition key
+   range_key      = "event_date" #Sort key
+
+  attribute {
+    name = "event_id"
+    type = "N" # S: String, N: Number, B: Binary
+  }
+  attribute {
+    name = "event_date"
+    type = "N"
+  }
+  tags = {
+    Project = "EventManagement"
+  }
+}
