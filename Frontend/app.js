@@ -2,7 +2,7 @@ const form = document.getElementById("event-form");
 const responseMessage = document.getElementById("response-message");
 
 // API Gateway Endpoint
-const apiEndpoint = "https://bo9flhwiqf.execute-api.us-east-1.amazonaws.com/production/api/events";  //add the api-endpoint link
+const apiEndpoint = "<api-gateway invoke url>";  //add the api-endpoint link
   
 
 // Event Listener for Form Submission
