@@ -3,21 +3,22 @@
  
 
 ##Project Overview
+
 The AWS Event Management Application is a web-based platform for managing event registrations. The frontend is developed using HTML, CSS, and JavaScript, while the backend is powered by AWS Lambda functions triggered through AWS API Gateway. Event data is stored in Amazon DynamoDB, providing scalable and fast storage. The infrastructure is managed using Terraform, which allows for seamless deployment and teardown.
 
 ________________________________________
 ##Technology Stack
-•	Frontend: HTML, CSS, JavaScript
-•	Backend: AWS Lambda, AWS API Gateway
-•	Database: Amazon DynamoDB
-•	Infrastructure as Code: Terraform
-•	Testing: AWS IAM Simulation, AWS SAM Local for Lambda Testing
+- **Frontend**: HTML, CSS, JavaScript
+- **Backend**: AWS Lambda, AWS API Gateway
+- **Database**: Amazon DynamoDB
+- **Infrastructure as Code**: Terraform
+- **Testing**: AWS IAM Simulation, AWS SAM Local for Lambda Testing
 ________________________________________
 ##Prerequisites
 Before you begin, make sure you have the following:
-1.	AWS CLI configured with the necessary permissions.
-2.	Terraform installed to provision the infrastructure.
-3.	AWS Default VPC (or modify the Terraform code to suit your VPC setup).
+-**AWS CLI** configured with the necessary permissions.
+-**Terraform** installed to provision the infrastructure.
+-**AWS Default VPC** (or modify the Terraform code to suit your VPC setup).
 ________________________________________
 ##Getting Started
 ###Clone the Repository
