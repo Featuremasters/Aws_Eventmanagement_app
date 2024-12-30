@@ -1,6 +1,6 @@
 # AWS Event Management Application
 
-                                                      ![![image](https://github.com/user-attachments/assets/e9bc1ae2-bcfc-40aa-8be2-8f56d08d1667)
+                                                      ![image](https://github.com/user-attachments/assets/e9bc1ae2-bcfc-40aa-8be2-8f56d08d1667)
 ]
 
 
