@@ -2,7 +2,7 @@ const form = document.getElementById("event-form");
 const responseMessage = document.getElementById("response-message");
 
 // API Gateway Endpoint
-const apiEndpoint = `<api-gateway-invoke-url>/api/events`;
+const apiEndpoint = `<api-gateway-invoke-url>/api/events`; //add the api-endpoint link
 
 // Event Listener for Form Submission
 form.addEventListener("submit", async function (e) {
