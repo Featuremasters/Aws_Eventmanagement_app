@@ -1,7 +1,7 @@
 # AWS Event Management Application
 
  ![![image](https://github.com/user-attachments/assets/21a63c30-853c-4d46-b0f2-1eaa95f1ed8c)
-](images/Screenshot 2024-12-31 025252.png)
+]
 
 ## Project Overview
 
