@@ -1,6 +1,6 @@
 # AWS Event Management Application
 
- 
+ ![Screenshot of Application](images/Screenshot 2024-12-31 025252.png)
 
 ## Project Overview
 
