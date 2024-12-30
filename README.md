@@ -18,9 +18,9 @@ ________________________________________
 ________________________________________
 ## Prerequisites
 Before you begin, make sure you have the following:
--**AWS CLI** configured with the necessary permissions.
--**Terraform** installed to provision the infrastructure.
--**AWS Default VPC** (or modify the Terraform code to suit your VPC setup).
+- **AWS CLI** configured with the necessary permissions.
+- **Terraform** installed to provision the infrastructure.
+- **AWS Default VPC** (or modify the Terraform code to suit your VPC setup).
 ________________________________________
 ## Getting Started
 ### Clone the Repository
