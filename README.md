@@ -74,6 +74,6 @@ ________________________________________
 
 ### Lambda Function Testing
 During the development process:
-1.	AWS IAM Simulation was used to simulate permissions and test Lambda function execution. This ensured the correct permissions were applied before deployment.
-2.	AWS SAM Local was used to invoke the Lambda function locally to verify its functionality before deployment.
+1.	**AWS IAM Simulation** was used to simulate permissions and test Lambda function execution. This ensured the correct permissions were applied before deployment.
+2.	**AWS SAM Local** was used to invoke the Lambda function locally to verify its functionality before deployment.
 
