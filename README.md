@@ -26,7 +26,6 @@ ________________________________________
 ### Clone the Repository
 Clone the repository to your local machine:
 ```
-Copy code
 https://github.com/Featuremasters/Aws_Eventmanagement_app.git
 cd AWS_EventManagement_app
 ```
@@ -35,14 +34,12 @@ cd AWS_EventManagement_app
 ### Initialize Terraform
 To initialize Terraform and download the required providers, run:
 ```
-Copy code
 terraform init
 ```
 
 ### Run Terraform Plan
 Before applying the changes, preview the resources that will be created or modified:
 ```
-Copy code
 terraform plan
 ```
 This will show a detailed plan of the actions Terraform will take. Review the output to ensure everything looks correct before applying the changes.
@@ -50,7 +47,6 @@ This will show a detailed plan of the actions Terraform will take. Review the ou
 ### Provision AWS Resources
 Once you've reviewed the plan, you can apply the configuration to provision the AWS resources (API Gateway, Lambda functions, DynamoDB table):
 ```
-Copy code
 terraform apply 
 ```
 Terraform will ask for confirmation to proceed. Type yes to create the resources.
@@ -59,7 +55,6 @@ Terraform will ask for confirmation to proceed. Type yes to create the resources
 After applying Terraform, you will receive an output with the API Gateway URL. Replace the placeholder <api-gateway-invoke-url> in your frontend JavaScript code with the actual API Gateway URL.
 For example, update the following line in your JavaScript code:
 ```
-Copy code
 const apiEndpoint =`<api-gateway-invoke-url>/api/events`;
 
 ```
