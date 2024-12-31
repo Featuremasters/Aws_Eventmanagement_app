@@ -1,4 +1,4 @@
-output "api_gateway_url" {
-  description = "The public URL for the API Gateway"
-  value       = aws_apigatewayv2_stage.stage.invoke_url
+output "frontend_public_url" {
+  description = "Public URL to access the frontend website"
+  value       = "http://${aws_instance.Event-management-app.public_ip}"
 }
