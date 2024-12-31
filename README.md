@@ -1,7 +1,5 @@
 # AWS Event Management Application
-![image](https://github.com/user-attachments/assets/cdb3f837-14d5-43f8-92d8-d646433c70c1)
- ![image](https://github.com/user-attachments/assets/18877458-1e3f-47c2-b6e1-b20c8e041b88)
-
+![alt text](image.png)
 
 ## Project Overview
 
@@ -10,6 +8,7 @@ The AWS Event Management Application is a web-based platform for managing event 
 ________________________________________
 ## Technology Stack
 - **Frontend**: HTML, CSS, JavaScript
+- **HOSTING**: EC2
 - **Backend**: AWS Lambda, AWS API Gateway
 - **Database**: Amazon DynamoDB
 - **Infrastructure as Code**: Terraform
@@ -50,7 +49,12 @@ terraform apply
 ```
 Terraform will ask for confirmation to proceed. Type yes to create the resources.
 
-### Retrieve the API Gateway URL
+### Deployment and Testing 
+After terraform apply, the resources will be deployed. This process may take a few minutes as the EC2 instance installs Apache2 and becomes available. Once the instance is set up, Terraform will output a public URL that can be used to access the event registration form. Please wait for about 5 minutes before testing the URL to ensure everything is fully deployed and accessible.
+
+
+### If hosting in local machine
+#### Retrieve the API Gateway URL 
 After applying Terraform, you will receive an output with the API Gateway URL. Replace the placeholder <api-gateway-invoke-url> in your frontend JavaScript code with the actual API Gateway URL.
 For example, update the following line in your JavaScript code:
 ```
